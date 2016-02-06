@@ -1,0 +1,50 @@
+[
+	{
+		url httptutorials.jenkov.comangularjsindex.html,
+		title AngularJS Tutorial,
+		image httptutorials.jenkov.comimageslayoutsmall-portrait_mini.jpg,
+		author Jakob Jenkov
+	},
+	{
+		url httptutorialzine.com201308learn-angularjs-5-examples,
+		title Learn AngularJS With These 5 Practical Examples,
+		image httpblog.guinatal.comwp-contentuploads201501angularjs.png,
+		author JMartin Angelov
+	},
+	{
+		url httpsgithub.comangular-appangular-app,
+		title AngularJS CRUD application demo,
+		image httpblog.guinatal.comwp-contentuploads201501angularjs.png,
+		author angular-app
+	},
+	{
+		url httpswww.airpair.comangularjsbuilding-angularjs-app-tutorial,
+		title AngularJS Tutorial - Building a Web App in 5 minutes,
+		image https0.gravatar.comavatar8ef3e73105c63fcac882115c9ad346f2s=100,
+		author Nick Kaye
+	},
+	{
+		url httpwww.toptal.comangular-jsa-step-by-step-guide-to-your-first-angularjs-app,
+		title A Step-by-Step Guide to Your First AngularJS App,
+		image httpwww.toptal.comuploadsuserphoto256small_1233500_508166272610903_1884720025_n.jpg,
+		author Raoni Boaventura
+	},
+	{
+		url httpng-learn.orgtagsworkshop.html,
+		title Angularjs -- Workshop,
+		image httpblog.guinatal.comwp-contentuploads201501angularjs.png,
+		author Santiago Esteva
+	},
+	{
+		url httpswww.youtube.comwatchv=tnXO-i7944M,
+		title AngularJS in 20ish Minutes ,
+		image httpblog.guinatal.comwp-contentuploads201501angularjs.png,
+		author Dan Wahlin
+	},
+	{
+		url httpwww.microsoftvirtualacademy.comtraining-coursesintroduction-to-angularjs,
+		title Introduction to AngularJS,
+		image httpsirodriguezm.files.wordpress.com200912logo_mva.png,
+		author Microsoft Virtual Academy
+	}	
+]
