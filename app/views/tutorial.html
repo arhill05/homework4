@@ -1,0 +1,18 @@
+<div ng-repeat="tut in tutorial.tutorials">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>{{tut.title}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-xs-6">
+                <p>Click <a href={{tut.url}}>here</a> to be taken to "<em>{{tut.title}}</em>"</p>
+                <p>{{tut.description}}</p>
+            </div>
+            <div class="col-xs-6">
+                <figure class="figure pull-right">
+                    <img src={{tut.image}} class="img-thumbnail" style="max-height: 100px; max-width: 100px;"/>
+                    <figcaption class="figure-caption" style="color: lightgrey;"><em><small>{{tut.author}}<small><em></figcaption>
+            </div>
+        </div>
+    </div>
+</div>
