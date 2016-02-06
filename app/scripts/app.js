@@ -8,14 +8,15 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('homework4App', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.sortable'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -38,6 +39,8 @@ angular
         redirectTo: '/'
       });
   });
+  
+
 
 var tutorials = [
 	{

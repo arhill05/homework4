@@ -36,12 +36,12 @@
             <a class="navbar-brand" href="#/">homework4</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="HeaderController as header">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/tutorial">Tutorials</a></li>
+              <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+              <li ng-class="{ active: isActive('/about')}"><a ng-href="#/about">About</a></li>
+              <li ng-class="{ active: isActive('/tutorial')}"><a ng-href="#/tutorial">Tutorials</a></li>
             </ul>
           </div>
         </div>
@@ -54,7 +54,7 @@
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>Andrew Hill - CIS 411 - Spring 2016</p>
       </div>
     </div>
 
@@ -81,6 +81,7 @@
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="../bower_components/angular-touch/angular-touch.js"></script>
+    <script src="../bower_components/angular-ui-sortable/sortable.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -89,6 +90,7 @@
         <script src="./scripts/controllers/main.js"></script>
         <script src="./scripts/controllers/about.js"></script>
         <script src="./scripts/controllers/tutorial.js"></script>
+        <script src="./scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
