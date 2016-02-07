@@ -1,23 +1,63 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    <h1>Let's Talk Angular</h1>
+    <p class="lead">
+        <em>An in-depth look at how the Tutorials page was created</em>
+        <br>
+        <img src="http://res.cloudinary.com/buddahbelly/image/upload/v1423072364/brilliantbritz/angular-js.png" style="height: 300px; width: 300px; alt="
+        AngularJS ">
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="container ">
+  <h2 class="text-center ">What is Angular?</h2>
+  <div class="col-xs-6 ">
+  AngularJS is a library that you can use to greatly enhance the ability of HTML and it's functionality. HTML on its own -- even when paired with JavaScript -- is often
+  not powerful enough to fulfill the needs of developers today. AngularJS introduces functionality such as data-binding, views, and so much more.
+  </div>
+  <div class="col-xs-6 " style="margin-bottom: 25px ">
+  Angular on its own is very powerful. However, there are many different plugins that you can choose to incorporate with Angular. When you pair this with Bootstrap or any other
+  common framework/library available to developers, Angular makes your web development arsenal a force to be reckoned with.
+  </div>
+  
+  <h3 class="text-center ">Tutorials.json</h3>
+  <div class="col-xs-12 ">How do we get this...</div><br><br>
+  <img src="images/tutorialsjson.png " class="text-center img-responsive img-rounded "><br><br>
+  <div class="col-xs-12 ">To this?</div><br><br>
+  <img src="images/tutorialsrender.png " class="text-center img-responsive img-rounded "><br><br>
+  
+  <div class="col-xs-12 ">
+      AngularJS makes this very simple. There are a few assumptions this blog post is making about your current setup:<br>
+      <ol>
+          <li>You know about HTML, Javascript, and JSON.</li>
+          <li>You generated a template from Yeoman for Angular</li>
+          <li>You are a badass web developer in the making</li>
+       </ol>          
+       
+       If this is true, then lets continue on!
+  </div>
+       
+  <div class="col-xs-12">
+      <h3 class="text-center">Routing and Views</h3>
+      <p>AngularJS uses something very similar to ASP.NET's MVC framework. It uses different "views" to render what is on the screen dynamically. In our case, 
+      index.html acts as a sort of layout for every page. This includes the footer, the navbar at the top of this page, and other similar items. All of the scripts
+      and CSS styling documents needed to make the page work are included in the index.html as well.</p>
+      <div class="col-xs-3"><img src="images/viewsdirectory.png" class="text-center img-responsive img-rounded"></div>
+      <div class="col-xs-9">If you look here, you can see that our current views are about.html and main.html. This means that the site knows about two views
+          that can be displayed to the user. Let's create another view.</div>
+      <p>Create a new HTML file in the views directory titled tutorial.html. You'll also need to create a new file on the scripts/controllers file named tutorial.js and declare a controller
+          named "TutorialCtrl" in that file.</p>  
+      <p>Once you've done that, we need to tell our Angular application that you've created a new view and controller for that view. This is what is called routing. If you 
+          try to navigate to a route that you've defined, Angular will take that and render the view in the section of your index.html that you specify for views. Add this 
+          snippet of code to your app.js file below your angular.module declaration:</p>
+          <pre>.when('/tutorial', {
+          templateUrl: 'views/tutorial.html',
+          controller: 'TutorialCtrl',
+          controllerAs: 'tutorial'
+          })</pre>
+          <p>Once this is done, create a list item in your navbar in your index.html with an ng-href of "#/tutorial". Once you've done this, your Angular app will know about
+              the route you've defined for the tutorials view and will render it whenever you click your link in the navbar for it! Easy, right?</p>
+              
+          <p>This would all be great if there was something IN your tutorial view. We've just got an empty tutorial.html file right now. Let's fix that.</p>
+          
+              
 </div>

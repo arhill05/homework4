@@ -58,6 +58,9 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.img-responsive {
+    margin: 0 auto;
+}
 .container-narrow > hr {
   margin: 30px 0;
 }
