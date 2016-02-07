@@ -37,7 +37,7 @@
   </div>
        
   <div class="col-xs-12">
-      <h3 class="text-center">Routing and Views</h3>
+      <h3 class="text-center">Routing and biews</h3>
       <p>AngularJS uses something very similar to ASP.NET's MVC framework. It uses different "views" to render what is on the screen dynamically. In our case, 
       index.html acts as a sort of layout for every page. This includes the footer, the navbar at the top of this page, and other similar items. All of the scripts
       and CSS styling documents needed to make the page work are included in the index.html as well.</p>
@@ -56,8 +56,43 @@
           })</pre>
           <p>Once this is done, create a list item in your navbar in your index.html with an ng-href of "#/tutorial". Once you've done this, your Angular app will know about
               the route you've defined for the tutorials view and will render it whenever you click your link in the navbar for it! Easy, right?</p>
-              
+              <h3 class="text-center">Making data accessible</h3>
           <p>This would all be great if there was something IN your tutorial view. We've just got an empty tutorial.html file right now. Let's fix that.</p>
+          <p>We need the data that will be rendered in each of these tutorial items before we can tell Angular to render the objects and their properties on an HTML page.
+             Take the contents of <a href="tutorials.json">tutorials.json</a> and paste them into a variable called "tutorials" within app.js. Then, go into your controller for your 
+             tutorial.js and set this.tutorials = tutorials. This will set the tutorials within the tutorial page to the tutorials you just added to app.js.
+             <div class="col-xs-6">
+                 <pre>var tutorials = [
+	{
+url: "http://tutorials.jenkov.com/angularjs/index.html",
+title: "AngularJS Tutorial",
+image: "http://tutorials.jenkov.com/images/layout/small-portrait_mini.jpg",
+
+...</pre>
+        </div>
+        <div class="col-xs-6">
+            <pre>.controller('TutorialCtrl', function () {   
+this.tutorials = tutorials;
+  });
+  
+  
+  
+  
+  </pre>
+  </div>
+  
+  <p>Now we have data that we can work with! This is the easy part. Navigate into your tutorial.html file in your views, and create an element - a div, a list, anything -- 
+      and specify an <code>ng-repeat="tut in tutorial.tutorials"</code>. This essentially says "create one of these elements for every object in this array."</p>
+  <p>With this foreach loop of sorts, you can render specific properties of those objects you're looping through with simple syntax. Let's say you want to display the 
+      URL of one of the objects.<p>
+      <p><img src="images/tuturl.png"> displays the element 'url' for the tutorial that is currently being looped through.</p>
+      <p>What if we want to display other items that are associated with it? Well it's easy.</p>
+      <p><img src="images/tutauthor.png"> will display the author. <img src="images/tutdescription.png"> will display the description. How about the image?</p>
+      <p>You can use Angular elements in HTML components just like you would with anything else. Let's display the image that is associated with an object.
+          Use <img src="images/tutimage.png" /> to display the image that is associated with the URL for that tutorial's image property.</p>
           
-              
+          <h3 class="text-center">The rest is up to you</h3>
+      <p>I've shown you what Angular can do and how to get it set up for this project. Now its up to you to display the tutorials in tutorials.json in
+          an eye-appealing manner. I'll reference some links down in the About page that can help you add search and sort functionality and all in all just
+          make your Angular application better! Good luck.</p>
 </div>
