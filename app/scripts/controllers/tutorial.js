@@ -8,7 +8,10 @@
  * Controller of the homework4App
  */
 angular.module('homework4App')
-  .controller('TutorialCtrl', function () {
+  .controller('TutorialCtrl', ['$http', function ($http) {
+      var self = this;
+    $http.get('tutorials.json').success(function (data) {
+        self.tutorials = data;
+    })
     
-    this.tutorials = tutorials;
-  });
+  }]);
